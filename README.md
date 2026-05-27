@@ -43,15 +43,15 @@ It works **out of the box for $0** using local models — no API key required. W
 
 ## Background
 
-In early spring 2026, my productivity hit an all-time high. I was heavily using Claude, Microsoft Copilot, Gemini, and ChatGPT in my day-to-day work, but the experience still was not quite what I wanted.
+In early spring 2026, my productivity hit an all-time high. I was heavily using a combination of Claude, Microsoft Copilot, Gemini, and ChatGPT in my day-to-day work, but it still was not feeling quite like I wanted it to.
 
-The friction came from context switching. Moving from one tool to another, copying and pasting files and answers around, and constantly re-orienting myself became the new roadblock in my productivity journey.
+I felt there was friction due to context switching. You see, switching from one tool to another, copy-pasting files and answers around, was the new roadblock in my productivity journey.
 
-After a while, I found myself staying more and more within GitHub Copilot (and coding assistants more generally), because a coding assistant is often all you need. It turns out that the paradigm we have converged to today — markdown, skills, agents as markdown, MCP, and related patterns — is already enough for most people, and especially for a technical audience that benefits from full customisation.
+After a while, I found myself staying more and more within GitHub Copilot (or coding assistants more generally) because a coding assistant is all you need. It turns out that the paradigm we have converged to today (markdown, skills, agents as markdown, MCP, ...) is actually enough for most people, especially for a technical audience, because we have the advantage of full customisation.
 
-So I built Veloce, merging most of my productivity tasks into one repo template. I have been using it for a while now, it works well, and I wanted to share it.
+So I built Veloce, merging most of my productivity tasks into this one repo template. I have been using it for a while now, and it is pretty good, so I thought I would share it. :)
 
-Veloce means fast in Italian, which captures the spirit and values of this endeavor. Veloce is designed to work regardless of your productivity and tech stack, and it is meant to be customised.
+Veloce means fast in Italian, which encompasses the spirit and values of this endeavor. Veloce works regardless of your productivity or tech stack and is meant to be customised.
 
 
 # Getting started
