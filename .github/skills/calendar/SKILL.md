@@ -18,6 +18,17 @@ Handle calendar-related user requests safely and clearly, including:
 
 Before attempting calendar operations, determine whether a concrete calendar integration is already implemented and available in the current environment.
 
+Always perform this sequence:
+1. Identify the user's preferred calendar provider (Google, Outlook, Apple, or other).
+2. Check whether that provider has an MCP server/tool available in the current environment.
+3. If MCP exists, use the MCP path first.
+4. If MCP does not exist, continue with non-MCP integration checks and fallback behavior.
+
+Treat provider MCP as available only when one of these is true:
+- A configured MCP server in the workspace clearly supports the selected provider.
+- A known built-in MCP tool in the current toolset supports the selected provider.
+- The user confirms an already connected MCP calendar service for that provider.
+
 Treat integration as available only when one of these is true:
 - There are explicit workspace tools/APIs already wired for calendar operations.
 - The project contains verified code/configuration for a calendar provider and credentials flow.
@@ -34,7 +45,7 @@ Ask the user this exact clarifying question (or equivalent wording):
 "I don't have a calendar service connected yet. Which calendar do you want to use: Google Calendar, Microsoft Outlook, Apple Calendar, or another provider?"
 
 Then continue based on the user choice:
-- If they pick a provider, propose next setup steps for that provider.
+- If they pick a provider, first check for provider MCP availability, then propose next setup steps for that provider.
 - If they are unsure, offer a short comparison and recommend one.
 - If they only need planning help without integration, provide a manual schedule draft.
 
