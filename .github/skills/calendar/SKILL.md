@@ -20,14 +20,18 @@ Before attempting calendar operations, determine whether a concrete calendar int
 
 Always perform this sequence:
 1. Identify the user's preferred calendar provider (Google, Outlook, Apple, or other).
-2. Check whether that provider has an MCP server/tool available in the current environment.
-3. If MCP exists, use the MCP path first.
-4. If MCP does not exist, continue with non-MCP integration checks and fallback behavior.
+2. Check local MCP availability for that provider in the current environment.
+3. If no local MCP is available, check internet availability for a provider MCP (official docs, provider repos, or trusted MCP registries).
+4. If MCP exists (local or internet-discoverable and installable), use or propose the MCP path first.
+5. If MCP does not exist, continue with non-MCP integration checks and fallback behavior.
+
+If the user has not selected a provider yet, ask for the preferred provider first, then run the same local-plus-internet MCP checks for that selected provider.
 
 Treat provider MCP as available only when one of these is true:
 - A configured MCP server in the workspace clearly supports the selected provider.
 - A known built-in MCP tool in the current toolset supports the selected provider.
 - The user confirms an already connected MCP calendar service for that provider.
+- A trusted internet source confirms a provider MCP exists and can be installed in this environment.
 
 Treat integration as available only when one of these is true:
 - There are explicit workspace tools/APIs already wired for calendar operations.
@@ -45,7 +49,7 @@ Ask the user this exact clarifying question (or equivalent wording):
 "I don't have a calendar service connected yet. Which calendar do you want to use: Google Calendar, Microsoft Outlook, Apple Calendar, or another provider?"
 
 Then continue based on the user choice:
-- If they pick a provider, first check for provider MCP availability, then propose next setup steps for that provider.
+- If they pick a provider, first check local MCP availability, then internet MCP availability, then propose next setup steps for that provider.
 - If they are unsure, offer a short comparison and recommend one.
 - If they only need planning help without integration, provide a manual schedule draft.
 
