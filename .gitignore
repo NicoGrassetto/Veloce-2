@@ -1,0 +1,7 @@
+# macOS
+.DS_Store
+
+# Editor
+.vscode/settings.json
+.vscode/launch.json
+.vscode/tasks.json
