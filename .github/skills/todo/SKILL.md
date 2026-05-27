@@ -44,14 +44,6 @@ Treat integration as available only when one of these is true:
 
 If none of the above is true, integration is **not implemented**.
 
-## Default Provider in This Repo
-
-No todo provider MCP is preconfigured in this workspace yet. The first time the user asks for a todo action:
-1. Run the detection sequence above.
-2. If no provider is selected, ask which one to use (default recommendation: Todoist, since it has a mature official MCP at `https://ai.todoist.net/mcp` with browser OAuth).
-3. Once a provider is chosen, install and configure its MCP server in `.vscode/mcp.json` automatically. Only ask the user for the things the agent cannot do itself (browser OAuth sign-in, pasting an API token into a secret, creating an OAuth app in the provider's developer console, granting workspace permissions).
-4. Record the chosen provider in repository memory so subsequent sessions skip the question.
-
 ## Required Fallback Behavior (No Integration)
 
 When todo integration is not implemented, do not pretend to access a task list.
@@ -94,7 +86,7 @@ When the integration is available, follow these rules:
 
 ## Provider Notes
 
-- **Todoist (default in this repo):** uses the `mcp_doist_todoist_*` tool family. Prefer `reschedule-tasks` over `update-tasks` when changing due dates so recurring tasks keep their schedule. Use `find-project-collaborators` to resolve user names to IDs before assigning.
+- **Todoist:** uses the `mcp_doist_todoist_*` tool family. Prefer `reschedule-tasks` over `update-tasks` when changing due dates so recurring tasks keep their schedule. Use `find-project-collaborators` to resolve user names to IDs before assigning.
 - **Linear:** if selected, install a Linear MCP server and authenticate with a workspace API key or OAuth app.
 - **GitHub Issues:** if selected, prefer an existing GitHub MCP server and reuse the repository's auth.
 - **TickTick, Microsoft To Do, Notion tasks, others:** check for an official or well-maintained community MCP server before falling back to manual planning.
