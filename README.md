@@ -41,6 +41,18 @@ Veloce is a fast, lightweight, AI-powered command-line assistant. It ships as a 
 
 It works **out of the box for $0** using local models — no API key required. When you need more power, plug in OpenAI, Anthropic, OpenRouter, or any OpenAI-compatible API. Bring your own provider, swap models on the fly, and keep full control over your setup.
 
+### Background
+
+In early spring 2026, my productivity hit an all-time high. I was heavily using Claude, Microsoft Copilot, Gemini, and ChatGPT in my day-to-day work, but the experience still was not quite what I wanted.
+
+The friction came from context switching. Moving from one tool to another, copying and pasting files and answers around, and constantly re-orienting myself became the new roadblock in my productivity journey.
+
+After a while, I found myself staying more and more within GitHub Copilot (and coding assistants more generally), because a coding assistant is often all you need. It turns out that the paradigm we have converged to today — markdown, skills, agents as markdown, MCP, and related patterns — is already enough for most people, and especially for a technical audience that benefits from full customisation.
+
+So I built Veloce, merging most of my productivity tasks into one repo template. I have been using it for a while now, it works well, and I wanted to share it.
+
+Veloce means fast in Italian, which captures the spirit and values of this endeavor. Veloce is designed to work regardless of your productivity and tech stack, and it is meant to be customised.
+
 ```bash
 vel ask "What is a goroutine?"       # one-shot question
 vel chat                             # interactive conversation
