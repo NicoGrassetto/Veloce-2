@@ -35,6 +35,10 @@
 
 Veloce is a fast, lightweight, AI-powered command-line assistant. It ships as a single binary called `vel`.
 
+<p align="center">
+  <img src=".github/assets/veloce-venn.svg" alt="Venn diagram showing Veloce as tech-agnostic, provider-agnostic, and customisable" width="720" />
+</p>
+
 It works **out of the box for $0** using local models — no API key required. When you need more power, plug in OpenAI, Anthropic, OpenRouter, or any OpenAI-compatible API. Bring your own provider, swap models on the fly, and keep full control over your setup.
 
 ```bash
