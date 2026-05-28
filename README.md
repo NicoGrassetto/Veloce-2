@@ -57,6 +57,19 @@ Veloce means fast in Italian, which encompasses the spirit and values of this en
 # Getting started
 
 
+# Project structure
+
+```
+.github/         Agents, skills, and Copilot instructions
+knowledge/       Example inputs for agents to feed on (not produced outputs)
+├── decks/       Example slide decks (Marp markdown, PPTX, PDF)
+├── reports/     Example analytical reports and notebooks
+├── articles/    Example long-form writing, blog posts, essays
+└── assets/      Example images, charts, and supporting files
+```
+
+The `knowledge/` folder is **reference material**, not an output bin. Agents read from it to learn your tone, formatting, and structural preferences when producing new artefacts. Drop in examples of decks, reports, or articles you like, and agents will mirror that style.
+
 ### Contributing
 
 Contributions are welcome! Veloce is community-driven and built in the open.
