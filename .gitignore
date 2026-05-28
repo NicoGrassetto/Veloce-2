@@ -5,3 +5,7 @@
 .vscode/settings.json
 .vscode/launch.json
 .vscode/tasks.json
+
+# Large reference decks (exceed GitHub 100MB limit)
+knowledge/decks/Microsoft Agent 365 Customer Pitch Deck.PPTX
+knowledge/decks/Microsoft Agent 365 Customer Pitch Deck.PDF

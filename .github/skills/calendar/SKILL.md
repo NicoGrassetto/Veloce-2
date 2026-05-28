@@ -22,7 +22,7 @@ Always perform this sequence:
 1. Identify the user's preferred calendar provider (Google, Outlook, Apple, or other).
 2. Check local MCP availability for that provider in the current environment.
 3. If no local MCP is available, check internet availability for a provider MCP (official docs, provider repos, or trusted MCP registries).
-4. If MCP exists (local or internet-discoverable and installable), use or propose the MCP path first.
+4. If MCP exists and is not already configured locally, install and configure it in this repository first, then use it.
 5. If MCP does not exist, continue with non-MCP integration checks and fallback behavior.
 
 If the user has not selected a provider yet, ask for the preferred provider first, then run the same local-plus-internet MCP checks for that selected provider.
@@ -32,6 +32,8 @@ Treat provider MCP as available only when one of these is true:
 - A known built-in MCP tool in the current toolset supports the selected provider.
 - The user confirms an already connected MCP calendar service for that provider.
 - A trusted internet source confirms a provider MCP exists and can be installed in this environment.
+
+When an MCP is internet-discoverable but not yet installed, treat installation as the default next action rather than merely suggesting it. Prefer official provider docs or the provider's repository, then trusted MCP registries. Install the MCP into this repo's workspace configuration so later calendar requests can use it directly.
 
 Treat integration as available only when one of these is true:
 - There are explicit workspace tools/APIs already wired for calendar operations.
@@ -49,9 +51,18 @@ Ask the user this exact clarifying question (or equivalent wording):
 "I don't have a calendar service connected yet. Which calendar do you want to use: Google Calendar, Microsoft Outlook, Apple Calendar, or another provider?"
 
 Then continue based on the user choice:
-- If they pick a provider, first check local MCP availability, then internet MCP availability, then propose next setup steps for that provider.
+- If they pick a provider, first check local MCP availability, then internet MCP availability, then install and configure a provider MCP in this repo when one exists.
 - If they are unsure, offer a short comparison and recommend one.
 - If they only need planning help without integration, provide a manual schedule draft.
+
+If an installable provider MCP is found online, the agent should:
+1. Verify the source is trustworthy.
+2. Add the MCP server configuration to the repo workspace, preferably in `.vscode/mcp.json`.
+3. Install any required repo-local dependencies or supporting files.
+4. Report what was installed and any remaining authentication steps.
+5. Resume the original calendar task once the MCP is ready.
+
+If no trustworthy installable MCP exists for the chosen provider, say so explicitly and fall back to non-MCP setup guidance.
 
 ## Interaction Rules
 

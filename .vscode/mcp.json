@@ -1,0 +1,19 @@
+{
+  "inputs": [
+    {
+      "type": "promptString",
+      "id": "googleCalendarClientId",
+      "description": "Google Calendar MCP OAuth client ID",
+      "password": false
+    }
+  ],
+  "servers": {
+    "googleCalendar": {
+      "type": "http",
+      "url": "https://calendarmcp.googleapis.com/mcp/v1",
+      "oauth": {
+        "clientId": "${input:googleCalendarClientId}"
+      }
+    }
+  }
+}
