@@ -66,9 +66,13 @@ knowledge/       Example inputs for agents to feed on (not produced outputs)
 ├── reports/     Example analytical reports and notebooks
 ├── articles/    Example long-form writing, blog posts, essays
 └── assets/      Example images, charts, and supporting files
+output/          Agent-produced content, isolated per project
+└── <project>/   One folder per project — all artefacts from a session land here
 ```
 
 The `knowledge/` folder is **reference material**, not an output bin. Agents read from it to learn your tone, formatting, and structural preferences when producing new artefacts. Drop in examples of decks, reports, or articles you like, and agents will mirror that style.
+
+The `output/` folder is where agents **write**. Every time an agent is asked to produce content, it creates (or reuses) a `output/<project-name>/` folder and isolates everything from that session inside it — markdown sources, exports, charts, scripts, and intermediate assets — so nothing leaks into `knowledge/` or the repo root.
 
 ### Contributing
 
