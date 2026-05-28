@@ -65,6 +65,10 @@ Contributions are welcome! Veloce is community-driven and built in the open.
 - Have an idea? [Start a discussion](https://github.com/NicoGrassetto/Veloce/issues/new)
 - Want to contribute code? Fork the repo, make your changes, and open a PR
 
+# Acknowledgements
+
+Veloce builds on the excellent work of [Anthropic's skills](https://github.com/anthropics/skills/tree/main), which inspired the skill format and patterns used in this repo.
+
 # License
 
 AGPL-3.0 — see [LICENSE](LICENSE) for details.
