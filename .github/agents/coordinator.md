@@ -30,6 +30,7 @@ The Coordinator chooses from the agents declared in this workspace. The common r
 - **`Analyst`** — tabular-data analysis in a Jupyter notebook; produces charts, tables, numeric findings with re-runnable cells. See [.github/agents/analyst.md](.github/agents/analyst.md).
 - **`Researcher`** — multi-source web + workspace research; produces a cited Markdown report. See [.github/agents/researcher.md](.github/agents/researcher.md).
 - **`Presenter`** — turns a brief or upstream artifact into a slide deck (marp Markdown or pptx template); delivers source + PDF + PPTX. See [.github/agents/presenter.md](.github/agents/presenter.md).
+- **`ExecutiveAssistant`** — personal chief-of-staff: calendar, todos, inbox triage, daily briefings, meeting prep. See [.github/agents/executive-assistant.md](.github/agents/executive-assistant.md).
 - **`Explore`** — fast read-only codebase exploration and Q&A.
 - Any other agent advertised in the current session's `<agents>` block (e.g. Azure-specific agents). The Coordinator reads that list and selects from it.
 
